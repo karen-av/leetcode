@@ -1,0 +1,35 @@
+
+
+def func_count(x, y):
+    #if x * y % 2 == 0:
+     #   return x * y / 2
+    return x * y // 2 + x * y % 2
+
+    #return(x * y / 2 if x * y % 2 == 0 else int(x*y - x * y/2 + x * y % 2))
+
+  
+
+#assert func_count(3, 3) == 5
+#assert func_count(2, 2) == 2
+#assert func_count(2, 3) == 3
+#assert func_count(0, 0) == 0
+#assert func_count(1, 2) == 1
+
+def avg(ranks):
+    assert len(ranks) != 0, 'hello'
+    return len(ranks)
+
+x = [1]
+print('length', avg(x)) 
+
+
+y = [12,4534,34]
+print(type(y))
+print(y)
+
+try:
+    x = 1 / 0
+except Exception as ex:
+        print(ex)
+finally:
+    print('ok')
