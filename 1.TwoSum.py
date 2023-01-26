@@ -18,10 +18,10 @@ You can return the answer in any order.
 
 
 def twoSum(nums, target):
-    res = []
-    for i, n in enumerate(nums):
-        k = 0
-        while k < len(nums):
+    for i in range(len(nums) - 1):
+        k = 1
+        while k < len(nums) - i:
+            print(nums[i], nums[i+k])
             if nums[i] + nums[i+k] == target:
                 return [i, i+k]
             k+=1  
@@ -34,8 +34,9 @@ def twoSum(nums, target):
         """
 
 
-nums = [2,7,11,15]
-target = 17
+nums = [-1,-2,-3,-4,-5]
+#nums = [3,3]
+target = -8
 Output= [0,1]
 print(twoSum(nums, target))
 #Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
