@@ -19,8 +19,7 @@ def longestCommonPrefix(strs):
         while tmp != strs[i][:len(tmp)]:
             tmp = tmp[:len(tmp) - 1]
     return tmp
-        
-    
-strs = ["c","acc","ccc"]
-#Output: "fl"
-print(longestCommonPrefix(strs))
+
+assert(longestCommonPrefix(["c","acc","ccc"])) == ''
+assert(longestCommonPrefix(["flower","flow","flight"])) == 'fl'
+assert(longestCommonPrefix(["ab","a"])) == 'a'
