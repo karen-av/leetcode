@@ -20,30 +20,6 @@ def longestCommonPrefix(strs):
             tmp = tmp[:len(tmp) - 1]
     return tmp
         
-
-
-"""
-   tmp = ''
-    res = ''
-
-    if len(strs) == 0:
-            return res
-    if len(strs) == 1:
-       return strs[0]
-
-    for i in strs:
-        if len(tmp) == 0:
-            tmp = i
-        else: 
-            if i not in tmp:
-                for k in range(min([len(tmp), len(i)])):
-                    if tmp[k] == i[k]:
-                        res += i[k]
-            else:
-                tmp = i
-        
-    return res
-   """
     
 strs = ["c","acc","ccc"]
 #Output: "fl"
