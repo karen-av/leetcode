@@ -54,10 +54,45 @@ def mergeTwoLists(list1, list2):
         mergedTail.next = list1
     elif list2 != None:
         mergedTail.next = list2
-
     
     return mergedHead
         
+def mergeTwoLists1(list1, list2):
+    
+    if list1 is None:
+        return list2
+    if list2 is None:
+        return list1 
+    
+    if list1.val <= list2.val:
+        mergeHead = list1
+        list1 = list1.next
+    else:
+        mergeHead = list2
+        list2 = list2.next
+    
+    mergeTail = mergeHead
+
+    while list1 is not None and list2 is not None:
+        if list1.val <= list2.val:
+            tmp = list1
+            list1 = list1.next 
+        else:
+            tmp = list2
+            list2 = list2.next
+        
+        mergeTail.next = tmp
+        mergeTail = tmp
+    
+    if list1 is not None:
+        mergeTail.next = list1
+    else:
+        mergeTail.next = list2
+    
+    return mergeHead
+
+        
+
 
 
 
