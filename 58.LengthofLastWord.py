@@ -21,4 +21,5 @@ def lengthOfLastWord(s):
 
 s = 'Hello fffffff World'
 print(lengthOfLastWord(s))
+assert(lengthOfLastWord(s)) == 5
     
