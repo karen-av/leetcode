@@ -42,14 +42,8 @@ def plusOne_1(digits):
         digits.insert(0, 1)
 
     return digits 
-    
-        
-        
 
 
-   
-
-
-digits = [8,9,9,9]
+digits = [8, 9, 9, 9]
 print(plusOne_1(digits))
-#assert(plusOne(digits)) == [1,2,4]
+#assert(plusOne_1(digits)) == [9,0,0,0]
