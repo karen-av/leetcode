@@ -36,11 +36,10 @@ def addBinary(a, b):
         else:
             res = '0' + res
 
-        #print(res)
-
     if tmp == 1:
         res = '1' + res
     return res
+
 
 def addBinary_1(a, b):
     res = ''
@@ -55,9 +54,6 @@ def addBinary_1(a, b):
         res = '1' + res
     return res
 
-
-
-    
 
 
 a = '1'
