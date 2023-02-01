@@ -15,3 +15,12 @@ x = ListNode([1,2,3])
 
 
 print((x.val))
+
+
+import itertools
+x = '11112'
+s = set()
+for p in itertools.permutations(x):
+    a = (''.join(p))
+    s.add(''.join(p))
+print(s)
