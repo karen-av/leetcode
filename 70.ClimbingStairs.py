@@ -27,21 +27,18 @@ def climbStairs(n):
     """
 
   
-    return  1 if n <= 1 else climbStairs(n - 1) + climbStairs(n - 2) 
+    #return  1 if n <= 1 else climbStairs(n - 1) + climbStairs(n - 2) 
 
+    if n <= 3:
+        return n
+    x = 3
+    y = 2
 
-"""
- sl = set()
-    digit = ''.join(['1' for i in range(n)]) # 111111 21111 2211 222
-    for i in range(n//2 + 1):
-        print(digit)
-        for p in range(len(digit)):
-            print(p)
-        digit = digit[2:] + '2'"""
-#for p in itertools.permutations(digit):
-    #sl.add(''.join(p))
-
-   
+    while(n > 3):
+        x = x + y
+        y = x - y
+        n -= 1
+    return x
 
 x = 45
 print(climbStairs(x))
