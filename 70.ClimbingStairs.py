@@ -33,7 +33,7 @@ def climbStairs(n):
         return n
     x = 3
     y = 2
-
+    
     while(n > 3):
         x = x + y
         y = x - y
@@ -42,6 +42,6 @@ def climbStairs(n):
 
 x = 45
 print(climbStairs(x))
-#assert(climbStairs(4)) == 5, 4
-#assert(climbStairs(5)) == 8, 5
-#assert(climbStairs(7)) == 21, 7
+assert(climbStairs(4)) == 5, 4
+assert(climbStairs(5)) == 8, 5
+assert(climbStairs(7)) == 21, 7
