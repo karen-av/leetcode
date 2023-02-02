@@ -16,6 +16,7 @@ class Solution(object):
         """
         if head == None:
             return head
+            
         head_to_ret = head
         
         while head.next != None:
