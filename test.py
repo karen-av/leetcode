@@ -24,3 +24,4 @@ for p in itertools.permutations(x):
     a = (''.join(p))
     s.add(''.join(p))
 print(s)
+
