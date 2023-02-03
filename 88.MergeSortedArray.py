@@ -38,31 +38,58 @@ Note that because m = 0, there are no elements in nums1. The 0 is only there to 
         
 """
 
+
+"""
 def merge(nums1, m, nums2, n):
     i, k = 0, 0
     while k != n:
         if nums1[i] <= nums2[k] and nums1[i] != 0:
             i+=1
         else:
-            nums1 = nums1[:i] + nums2[k:k+1] + nums1[i:len(nums1) - 1]
+            #nums1 = nums1[:i] + nums2[k:k+1] + nums1[i:len(nums1) - 1]
+            tmp = nums1[i:len(nums1) - 1]
+            nums1[i] = nums2[k]
+            nums1 = nums1[:i+1] + tmp
             k+=1
             i+=1
+    return nums1
+"""
+
+def merge(nums1, m, nums2, n):
+    k = m + n - 1
+    while k >= 0:
+        if (n == 0 or nums1[m - 1] >= nums2[n - 1]) and m != 0:
+            print(f'm - {m}, k - {k}')
+            nums1[k] = nums1[m - 1]
+            m -= 1
+        else:
+            print(f'n - {n}, k - {k}')
+            nums1[k] = nums2[n - 1]
+            n -= 1
+        k -= 1
+            
     return nums1
 
 nums1 = [1,2,3,0,0,0]
 nums2 = [2,5,6]
 m = 3
 n = 3
-print(merge(nums1, m, nums2, n))
+#print(merge(nums1, m, nums2, n))
 
 nums1 = [1]
 nums2 = [0]
 m = 1
 n = 0
-print(merge(nums1, m, nums2, n))
+#print(merge(nums1, m, nums2, n))
 
 nums1 = [0]
 nums2 = [1]
 m = 0
+n = 1
+#print(merge(nums1, m, nums2, n))
+
+nums1 = [2,0]
+nums2 = [1]
+m = 1
 n = 1
 print(merge(nums1, m, nums2, n))
