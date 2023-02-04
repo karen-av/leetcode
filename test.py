@@ -23,5 +23,13 @@ s = set()
 for p in itertools.permutations(x):
     a = (''.join(p))
     s.add(''.join(p))
-print(s)
+print(a, s)
 
+d = ['f','s']
+def te(x):
+    return " ".join(x) 
+print(te(d))
+
+m, n = 3, 4
+l = [[] for i in range(n)]
+print(l)
